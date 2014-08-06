@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<link href="http://maxcdn.bootstrapcdn.com/bootswatch/3.1.1/readable/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ site.baseurl }}css/base.css" rel="stylesheet" media="screen">
+    <link href="http://maxcdn.bootstrapcdn.com/bootswatch/3.1.1/lumen/bootstrap.min.css" rel="stylesheet">
+
+  </head>
+  <body>
+     {% include header.html %}
+    <div id="content" class="container">
+      <div class="row">
+        <nav class="col-md-3">
+          <div class="well">
+            <ul class="nav nav-pills nav-stacked">
+        {% include nav.html %}
+            </ul>
+
+          </div>
+         
+        </nav>
+        <main class="col-md-8 col-md-offset-1">
+        {{ content }}
+      </main>
+      </div>
+    </div>
+    {% include footer.html %}
+    <script src="http://code.jquery.com/jquery.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+   
+  </body>
+</html>
